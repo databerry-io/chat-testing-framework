@@ -28,7 +28,10 @@ def main():
     user_input = get_text()
 
     if user_input:
-        output = chat.answer(user_input)
+        answer, sources = chat.answer(user_input)
+
+        answer += "\n\n---------------Sources---------------\n\n"
+        output = answer + "\n".join(f"Source {i}:\n{source}" for i, source in enumerate(sources))
         # store the output 
         st.session_state.past.append(user_input)
         st.session_state.generated.append(output)
