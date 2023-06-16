@@ -3,8 +3,8 @@ import streamlit as st
 from streamlit_chat import message
 
 #Creating the chatbot interface
-st.title("LLM-Powered Chatbot for Intelligent Conversations")
-st.subheader("AVA-Abonia Virtual Assistant")
+st.title("Mobius Labs")
+st.subheader("Chat Testing Framework")
 
 # Storing the chat
 if 'generated' not in st.session_state:
